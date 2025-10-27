@@ -140,7 +140,11 @@ export class MemStorage implements IStorage {
 
     initialPackages.forEach((pkg) => {
       const id = randomUUID();
-      const fullPackage: Package = { ...pkg, id };
+      const fullPackage: Package = { 
+        ...pkg, 
+        id,
+        originalPrice: pkg.originalPrice ?? null
+      };
       this.packages.set(id, fullPackage);
     });
   }
@@ -176,7 +180,11 @@ export class MemStorage implements IStorage {
 
   async createPackage(insertPackage: InsertPackage): Promise<Package> {
     const id = randomUUID();
-    const pkg: Package = { ...insertPackage, id };
+    const pkg: Package = { 
+      ...insertPackage, 
+      id,
+      originalPrice: insertPackage.originalPrice ?? null
+    };
     this.packages.set(id, pkg);
     return pkg;
   }
