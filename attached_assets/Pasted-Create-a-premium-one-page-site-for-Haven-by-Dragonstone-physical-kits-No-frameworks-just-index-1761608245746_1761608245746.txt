@@ -1,0 +1,73 @@
+Create a premium one-page site for Haven — by Dragonstone (physical kits). No frameworks, just index.html, style.css, script.js. Must run in Replit’s HTML/CSS/JS template.
+
+Brand & Theme:
+
+Dark graphite background #0B0F14, text #E7EDF3, accent #4DA3FF.
+
+Font: Inter (Google Fonts).
+
+Max content width: 1100px, centered.
+
+Apple-style spacing, subtle depth, calm motion (fade/slide-up 200–300ms).
+
+Buttons: rounded 12px, bold, soft blue glow on hover.
+
+Structure (sections in this exact order):
+
+Sticky Navbar: left “HAVEN”; links: Kits • Quiz • Support • Contact; right CTA button “Shop Kits” (scrolls to Kits).
+
+Hero:
+
+H1: Your Setup. Solved.
+
+Sub: Curated kits engineered for clarity.
+
+Two buttons: Shop Kits (solid blue → #kits) and Find Your Perfect Setup (outline → #quiz).
+
+Background: dark gradient with subtle spotlight.
+
+Kits (id="kits") — three product cards in a responsive grid (stack on mobile). Each card has image placeholder, short copy, price, and a Buy Now button that opens in a new tab to a placeholder Stripe link.
+
+Clean Desk Kit — “Declutter your mind — starting with your cables.” — $89 — Button href: https://buy.stripe.com/REPLACE_CLEAN
+
+Reliable Connection Kit — “Stay connected, always.” — $69 — Button href: https://buy.stripe.com/REPLACE_RELIABLE
+
+Nomad Tech Survival Kit — “Power anywhere.” — $39 — Button href: https://buy.stripe.com/REPLACE_NOMAD
+
+Quiz Anchor (id="quiz") — compact CTA band:
+
+Title: Not sure which kit fits your life?
+
+Text: “Take a 60-second quiz and we’ll match you.”
+
+Button: Find My Kit → (external placeholder: https://yourquiz.link/REPLACE)
+
+Trust Strip: centered muted line: ★★★★★ Trusted by creators • Secure checkout by Stripe • 30-Day Returns
+
+Support (id="support") — three columns:
+
+Shipping & Returns: “30-day returns. Customer pays return shipping unless defective.”
+
+Privacy: “We never store card details. Payments handled securely by Stripe.”
+
+Contact: mailto:support@dragonstone.online
+
+Footer: centered: © 2025 Haven — A Dragonstone Enterprises Brand. + tiny links: Terms | Privacy | Refund.
+
+Requirements:
+
+Create/overwrite index.html, style.css, script.js and link them correctly.
+
+Add /assets folder and reference hero.jpg, clean-desk.jpg, reliable.jpg, nomad.jpg (use placeholders if missing).
+
+Smooth fade-in on scroll for cards/trust/support (IntersectionObserver in script.js).
+
+All external links open with target="_blank" rel="noopener".
+
+Mobile-first responsive: cards stack, nav collapses gracefully (no heavy JS menu required).
+
+Keep copy minimal; no “Basic/Pro/Enterprise,” no “Sign Up.” These are physical kits.
+
+Deliverables:
+
+Running page in Replit preview with the exact sections above, dark theme, premium spacing, hover glow, and placeholder Stripe/quiz links ready to replace.
