@@ -1,8 +1,8 @@
-# SetupBox Store - E-commerce Product Bundle Platform
+# Haven - E-commerce Product Bundle Platform
 
 ## Overview
 
-SetupBox Store is a premium e-commerce platform specializing in curated tech product bundles. The application showcases product packages with Apple-inspired minimalist design, featuring hero sections, detailed product information, and seamless navigation. Built as a full-stack TypeScript application with React frontend and Express backend.
+Haven is a premium e-commerce platform by Dragonstone specializing in curated tech product bundles. The application showcases product packages with Apple-inspired minimalist design, featuring hero sections, detailed product information, and seamless navigation. Built as a full-stack TypeScript application with React frontend and Express backend.
 
 ## User Preferences
 

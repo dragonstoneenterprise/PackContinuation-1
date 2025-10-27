@@ -37,7 +37,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" data-testid="link-home">
             <span className="text-xl font-bold tracking-tight hover-elevate px-2 py-1 rounded-md">
-              SetupBox
+              HAVEN
             </span>
           </Link>
 
