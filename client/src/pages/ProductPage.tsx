@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Truck, Shield, RotateCcw } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLocation } from "wouter";
 
 interface ProductPageProps {
   name: string;
@@ -28,8 +29,15 @@ export function ProductPage({
   category,
 }: ProductPageProps) {
   const [isVisible, setIsVisible] = useState(false);
+  const [, setLocation] = useLocation();
   const savings = originalPrice - price;
   const savingsPercent = Math.round((savings / originalPrice) * 100);
+
+  const handleBuyClick = () => {
+    // Pass product identifier to checkout, server will fetch the actual price
+    const slug = window.location.pathname.split('/').pop();
+    setLocation(`/checkout?slug=${slug}`);
+  };
 
   useEffect(() => {
     setIsVisible(true);
@@ -80,6 +88,7 @@ export function ProductPage({
               size="lg"
               className="rounded-full px-8 py-6 text-base md:text-lg"
               data-testid="button-buy"
+              onClick={handleBuyClick}
             >
               Buy - ${price}
             </Button>
@@ -125,7 +134,7 @@ export function ProductPage({
                 </p>
               </div>
 
-              <Button size="lg" className="rounded-full px-8 w-full sm:w-auto" data-testid="button-buy-now">
+              <Button size="lg" className="rounded-full px-8 w-full sm:w-auto" data-testid="button-buy-now" onClick={handleBuyClick}>
                 Buy Now
               </Button>
             </div>
@@ -188,6 +197,7 @@ export function ProductPage({
               variant="secondary"
               className="rounded-full px-8 py-6 text-base md:text-lg"
               data-testid="button-buy-footer"
+              onClick={handleBuyClick}
             >
               Buy for ${price}
             </Button>
